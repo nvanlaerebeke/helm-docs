@@ -21,7 +21,7 @@ spec:
     stage('build') {
       steps {
         container(name: 'helm') {
-          sh '''#!/bin/bash 
+          sh '''#!/bin/sh 
 export HELM_EXPERIMENTAL_OCI=1          
 
 NAME=helm-docs
