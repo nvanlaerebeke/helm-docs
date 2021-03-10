@@ -29,11 +29,11 @@ VERSION=`yq eval -j Chart.yaml | jq -r .version`
 FULLVERSIONNAME=$REGISTRY/$NAME:$VERSION
 FULLLATESTNAME=$REGISTRY/$NAME:latest
 
-helm chart save . ${FULLVERSIONNAME}
-helm chart save . ${FULLLATESTNAME}
+helm chart save . "$FULLVERSIONNAME"
+helm chart save . "$FULLLATESTNAME"
 
-helm chart push ${FULLVERSIONNAME}
-helm chart push ${FULLLATESTNAME}
+helm chart push "$FULLVERSIONNAME"
+helm chart push "$FULLLATESTNAME"
           '''
         }        
       }
