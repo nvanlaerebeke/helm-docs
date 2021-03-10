@@ -15,7 +15,6 @@ spec:
     - infinity
 '''
     }
-
   }
   stages {
     stage('build') {
