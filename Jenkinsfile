@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: helm
-    image: alpine/helm
+    image: registry.crazyzone.be/helm:latest
     imagePullPolicy: Always
     command:
     - sleep
@@ -25,8 +25,7 @@ spec:
 export HELM_EXPERIMENTAL_OCI=1          
 
 NAME=helm-docs
-VERSION=0.0.1
-#`yq eval -j Chart.yaml | jq -r .version`
+VERSION=`yq eval -j Chart.yaml | jq -r .version`
 FULLVERSIONNAME=$REGISTRY/$NAME:$VERSION
 FULLLATESTNAME=$REGISTRY/$NAME:latest
 
