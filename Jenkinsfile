@@ -25,7 +25,8 @@ spec:
 export HELM_EXPERIMENTAL_OCI=1          
 
 NAME=helm-docs
-VERSION=`yq eval -j Chart.yaml | jq -r .version`
+VERSION=0.0.1
+#`yq eval -j Chart.yaml | jq -r .version`
 FULLVERSIONNAME=$REGISTRY/$NAME:$VERSION
 FULLLATESTNAME=$REGISTRY/$NAME:latest
 
